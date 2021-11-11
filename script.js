@@ -8,6 +8,11 @@ function writePassword() {
 
   passwordText.value = password;
 
+console.log('generate a password')
+return password;
+// for loop until password is desired length 
+
+
 }
 
 // Add event listener to generate button
