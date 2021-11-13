@@ -16,7 +16,7 @@ function writePassword() {
  if(length <= 8 || length >= 128 || length === '' || length.match(/[a-z]/i) ||
  length.match(/[A-Z]/i))
  {
-   alert('please try again')
+   alert('Please try again')(location.reload(true))
  };
 
  console.log('length',length)
@@ -26,7 +26,7 @@ function writePassword() {
    userPass.push(specialChar)
  };
  console.log('user pass array',userPass);
- 
+
  var userLowCase=confirm("Would you like lower case letters in your password?");
  if (userLowCase) {
    userPass.push(lowerCase)
@@ -46,9 +46,16 @@ console.log('user pass array',userPass);
  console.log('user pass array',userPass);
 
  }
-// for loop until password is desired length 
+
+/*let randomPass  = userPass[Math.floor(Math.random() * length)];
+console.log(randomPass);
+ } */
+
+//for loop until password is desired length 
+// let finalPass = '';  for (let i=0; i<length; i++)  {userPass.concat(passWord); * };  
 
 
+// concat() method used to merge two or more arrays. Does not change existing arrays. returns a new array. 
 
 
 // Add event listener to generate button
