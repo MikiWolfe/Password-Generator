@@ -1,7 +1,10 @@
 # Password-Generator
 Password generated with special characters
 
-# pseudocode 
+## Our Project 
+Our client would like us to build them a random password generator.  We have been given requirements from the client on length and characters they would like to use.   
+
+
 -what does application need to run?
 password lower/uppercase, special characters, numbers.
 
@@ -30,7 +33,11 @@ special characters?
 
 - Loop - repeat until password reaches the requested length.  
 
-#
+## What I learned from this project 
+
+    -Take small steps. Run one line of code after you write it. 
+    -JavaScript can smell fear. 
+    -
 
 
 
