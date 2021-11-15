@@ -8,24 +8,24 @@ var integer=['1','2','3','4','5','6','7','8','9','0'];  //numbers
 
 
 //Empty Arrays
-var userPass=[]; 
+var userPass=['A','B','C']; 
 var finalPass=[]; 
 // Assignment Code
-
+// Assignment Code
 var generateBtn = document.querySelector("#generate");
 function generatePassword(){
 
-  var length = prompt('please choose a password length between 8 and 128 characters'); //alert asking for user input
+  var passLength = prompt('please choose a password length between 8 and 128 characters'); //alert asking for user input
 
-  if(length <= 8 || length >= 128 || length === '' || length.match(/[a-z]/i) ||
-  length.match(/[A-Z]/i))  
+  if(passLength <= 8 || passLength >= 128 || passLength === '' || passLength.match(/[a-z]/i) ||
+  passLength.match(/[A-Z]/i))  
    //length.match(/[^0-9]/g));
   //parameters for password length, characters, ensuring the user enters in a number.
   {
     alert('Please try again')(location.reload(true)) //reload the page if entry does match. 
   };
  
-  console.log('length',length) 
+  console.log('length',passLength) 
  
   var userSpecialChar=confirm("Clink OK to use special characters in your password?");
   if (userSpecialChar) {
@@ -50,30 +50,30 @@ function generatePassword(){
   if (userInt) {
   userPass.push(integer)} 
   console.log('user pass array',userPass);
- 
-}
 
-// concat() method used to merge two or more arrays. Does not change existing arrays. returns a new array. 
-// if(userLowCase) {
-  // userPass = userPass.concat(integer)
-// }
+//random charachter generator 
+var index =(Math.floor(Math.random() * userPass.length));
+console.log(index);
 
-//  return password;
-//let indexPointer  = [Math.floor(Math.random() * userPass.length)]; var randomSelection = var[indexPointer]
-//console.log(randomPass);
- 
 
 //for loop until password is desired length 
-// let finalPass = '';  for (let i=0; i<length; i++)  {userPass.concat(passWord); * };  
+ let finalPass = '';  for (let i=0; i<length; i++)  {userPass.concat(); 
+
+
+}
+}
+
+//if(userLowCase) {
+ //  userPass = userPass.concat(integer)} how to combine arrays
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = document.querySelector("#password")
 
   passwordText.value = password;
 
-}
-
+};
+//return password
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword)
