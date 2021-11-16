@@ -1,77 +1,67 @@
-var specialChar=['!','#','$','%','&','(', ')','*','+','-','.','/',':',';','<','=','>',
-'?','@','[',']','^','`','{','}','|','~'];  //Special Characters 
-var lowerCase=['a', 'b', 'c','d','e','f','h','i','j','k','l','m','n','o','p',
-'q','r','s', 't', 'u', 'v','w','x','y','z']; //lowercase letters 
-var upperCase=['A','B','C','D','E','F','G','H','I', 'J','K','L','M'
-,'N','O','P','Q','R','S','T','U','V','W', 'X','Y', 'Z'] // uppercase letters 
-var integer=['1','2','3','4','5','6','7','8','9','0'];  //numbers
+var specialChar='!#$%&()*+-./:;<=>?@[]^`{}|~';  //Special Characters 
+var lowerCase= "abcdefhijklmnopqrstuvwxyz"; //lowercase letters 
+var upperCase="ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // uppercase letters 
+var integer="1234567890";  //numbers
 
 
 //Empty Arrays
-var userPass=['A','B','C']; 
+var userPass=[]; 
 var finalPass=[]; 
-// Assignment Code
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 function generatePassword(){
 
   var passLength = prompt('please choose a password length between 8 and 128 characters'); //alert asking for user input
 
-  if(passLength <= 8 || passLength >= 128 || passLength === '' || passLength.match(/[a-z]/i) ||
-  passLength.match(/[A-Z]/i))  
-   //length.match(/[^0-9]/g));
-  //parameters for password length, characters, ensuring the user enters in a number.
-  {
+  if(passLength <= 7 || passLength >= 128 || passLength === '' || passLength.match(/[a-z]/i) || passLength.match(/[A-Z]/i))  {
+    
     alert('Please try again')(location.reload(true)) //reload the page if entry does match. 
-  };
- 
+  }
+  
+  //parameters for password length, characters, ensuring the user enters in a number.
+   
   console.log('length',passLength) 
  
-  var userSpecialChar=confirm("Clink OK to use special characters in your password?");
+  var userSpecialChar=confirm("Clink OK to use special characters in your password?"); 
   if (userSpecialChar) {
-    userPass.push(specialChar)
+    userPass.push(...specialChar)
   };
   console.log('user pass array',userPass);
  
   var userLowCase=confirm("Clink OK to use lower case letters in your password?");
   if (userLowCase) {
-    userPass.push(lowerCase)
+    userPass.push(...lowerCase)
   };
  
   console.log('user pass array',userPass);
  
   var userUpCase=confirm("Clink OK to use upper case letters in your password?");
   if (userUpCase) {
-    userPass.push(upperCase)
+    userPass.push(...upperCase)
   }
  console.log('user pass array',userPass);
  
   var userInt=confirm("Clink OK to use numbers in your password?");
   if (userInt) {
-  userPass.push(integer)} 
+  userPass.push(...integer)} 
   console.log('user pass array',userPass);
 
-//random charachter generator 
-var index =(Math.floor(Math.random() * userPass.length));
-console.log(index);
 
-
-//for loop until password is desired length 
- let finalPass = '';  for (let i=0; i<length; i++)  {userPass.concat(); 
-
-
+for (let i = 0; i < passLength; i++) {
+  console.log('passLength[i]',passLength[i]);
+  finalPass.push(userPass[Math.floor(Math.random() * userPass.length)])
+  console.log('final pass .join()',finalPass.join('+'));
+  
 }
 }
-
-//if(userLowCase) {
- //  userPass = userPass.concat(integer)} how to combine arrays
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  generatePassword();
   var passwordText = document.querySelector("#password")
 
-  passwordText.value = password;
+  passwordText.value = finalPass.join('');
 
 };
 //return password
