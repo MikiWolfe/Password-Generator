@@ -14,7 +14,9 @@ function generatePassword(){
 
   var passLength = prompt('please choose a password length between 8 and 128 characters'); //alert asking for user input
 
-  if(passLength <= 7 || passLength >= 128 || passLength === '' || passLength.match(/[a-z]/i) || passLength.match(/[A-Z]/i))  {
+  if(passLength <= 7 || passLength >= 128 || passLength === '' || passLength.match(/[^0-9]/g))
+  //passLength.match(/[a-z]/i) || passLength.match(/[A-Z]/i))  
+  {
     
     alert('Please try again')(location.reload(true)) //reload the page if entry does match. 
   }
@@ -23,26 +25,26 @@ function generatePassword(){
    
   console.log('length',passLength) 
  
-  var userSpecialChar=confirm("Clink OK to use special characters in your password?"); 
+  var userSpecialChar=confirm("Click OK to use special characters in your password?"); 
   if (userSpecialChar) {
     userPass.push(...specialChar)
   };
   console.log('user pass array',userPass);
  
-  var userLowCase=confirm("Clink OK to use lower case letters in your password?");
+  var userLowCase=confirm("Click OK to use lower case letters in your password?");
   if (userLowCase) {
     userPass.push(...lowerCase)
   };
  
   console.log('user pass array',userPass);
  
-  var userUpCase=confirm("Clink OK to use upper case letters in your password?");
+  var userUpCase=confirm("Click OK to use upper case letters in your password?");
   if (userUpCase) {
     userPass.push(...upperCase)
   }
  console.log('user pass array',userPass);
  
-  var userInt=confirm("Clink OK to use numbers in your password?");
+  var userInt=confirm("Click OK to use numbers in your password?");
   if (userInt) {
   userPass.push(...integer)} 
   console.log('user pass array',userPass);
