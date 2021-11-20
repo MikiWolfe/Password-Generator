@@ -1,44 +1,21 @@
 # Password-Generator
-Password generated with special characters
+Password generated with special characters, numbers and letters.  
 
 ## Our Project 
-Our client would like us to build them a random password generator.  We have been given requirements from the client on length and characters they would like to use.   
+Our client would like us to build them a random password generator.  We have been given requirements from the client on length and characters they would like to use. We are then printing that password to the text box on the HTML page.  We are using user input to make a password using their input to meet their requirements. 
 
 
--what does application need to run?
-password lower/uppercase, special characters, numbers.
+# What I learned from this project 
 
-List for all needed numbers 0-9.
-List for all lower case a-z
-List for all Uppercase A-Z
-List all special characters !-*
+    - Take small steps. Run one line of code after you write it. 
+    - JavaScript can smell fear. 
+    - Chrome console is a best friend.
+    - How to make an alert, confirm and prompt to get user input and store it to be compared later.  
+    - How to make an empty array to story and push strings into it.  
 
-# User input 
-for each of the following, declare a variable to store the value:
+    
+# Screen shot of page
+![PasswordGenerator](https://mikiwolfe.github.io/Password-Generator/)"Password Generator"
 
-password length verify that it is between 8-128
-want lower/upper
-case letters? 
-numbers? 
-special characters?
-
-# What steps are needed to build a password 
--asking the user for criteria
-
-- Make a list that only has the type of characters we are looking for (array list) matching the requested options
-
-- Randomly select a character from the list 
-
-- Then add the randomly selected character to the string "Password"
-
-- Loop - repeat until password reaches the requested length.  
-
-## What I learned from this project 
-
-    -Take small steps. Run one line of code after you write it. 
-    -JavaScript can smell fear. 
-    -
-
-
-
-
+# Link to deployed website 
+https://mikiwolfe.github.io/Password-Generator/
